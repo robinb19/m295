@@ -16,9 +16,5 @@ public class Team {
     @Size(max = 100)
     @NotEmpty
     private String teamName;
-   /* @Column(length = 100, nullable = false)
-    @Size(max = 100)
-    @NotEmpty
-    private String firstname;*/
 
 }

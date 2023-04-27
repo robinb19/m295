@@ -1,4 +1,4 @@
-package ch.ilv.KoSystem.z_choiceTeam;
+package ch.ilv.KoSystem.z_crateTournament;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

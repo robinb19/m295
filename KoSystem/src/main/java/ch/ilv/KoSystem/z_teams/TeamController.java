@@ -22,35 +22,35 @@ public class TeamController {
     }
 
     @GetMapping("api/team")
-    @RolesAllowed(Roles.Admin)
+    @RolesAllowed(Roles.Read)
     public ResponseEntity<List<Team>> all() {
         List<Team> result = teamService.getTeam();
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
     @GetMapping("api/team/{id}")
-    @RolesAllowed(Roles.Admin)
+    @RolesAllowed(Roles.Read)
     public ResponseEntity<Team> one(@PathVariable Long id) {
         Team team = teamService.getTeam(id);
         return new ResponseEntity<>(team, HttpStatus.OK);
     }
 
     @PostMapping("api/team")
-    @RolesAllowed(Roles.Admin)
+    @RolesAllowed(Roles.ReadWrite)
     public ResponseEntity<Team> newTeam(@Valid @RequestBody Team team) {
         Team savedTeam = teamService.insertTeam(team);
         return new ResponseEntity<>(savedTeam, HttpStatus.OK);
     }
 
-    @PostMapping("api/team/{id}")
-    @RolesAllowed(Roles.Admin)
+    @PutMapping("api/team/{id}")
+    @RolesAllowed(Roles.ReadWrite)
     public ResponseEntity<Team> updateTeam(@Valid @RequestBody Team team, @PathVariable Long id) {
         Team updateTeam = teamService.updateTeam(team, id);
         return new ResponseEntity<>(updateTeam, HttpStatus.OK);
     }
 
-    @DeleteMapping("api/employee/{id}")
-    @RolesAllowed(Roles.Admin)
+    @DeleteMapping("api/team/{id}")
+    @RolesAllowed(Roles.ReadWrite)
     public ResponseEntity<MessageResponse> deleteTeam(@PathVariable Long id) {
         try {
             return ResponseEntity.ok(teamService.deleteTeam(id));

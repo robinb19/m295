@@ -1,31 +1,26 @@
-package ch.ilv.KoSystem.z_choiceTeam;
+package ch.ilv.KoSystem.z_favoriteTeam;
 
 import ch.ilv.KoSystem.z_teams.Team;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
-import java.util.Date;
-
 @Data
 @Entity
-public class Tournament {
+public class FavoriteTeam {
     @Id
     @GeneratedValue
     private Long id;
-
     @Column(length = 100, nullable = false)
     @Size(max = 100)
     @NotEmpty
-    private String turniername;
+    private String name;
     @Column(length = 100, nullable = false)
+    @Size(max = 100)
     @NotEmpty
-    private String veranstaltungsOrt;
-    @Column(nullable = false)
-    @Temporal(TemporalType.DATE)
-    @NotNull
-    private Date fromDate;
+    private String firstname;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "team_id")
+    private Team team;
 }
-
