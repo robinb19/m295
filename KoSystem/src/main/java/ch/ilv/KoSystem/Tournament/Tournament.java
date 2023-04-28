@@ -1,6 +1,5 @@
-package ch.ilv.KoSystem.z_crateTournament;
+package ch.ilv.KoSystem.Tournament;
 
-import ch.ilv.KoSystem.z_tournamentMember.TournamentMember;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -8,7 +7,6 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 import java.util.Date;
-import java.util.List;
 
 @Data
 @Entity

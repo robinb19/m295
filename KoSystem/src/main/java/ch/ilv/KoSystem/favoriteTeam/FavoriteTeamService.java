@@ -1,4 +1,4 @@
-package ch.ilv.KoSystem.z_favoriteTeam;
+package ch.ilv.KoSystem.favoriteTeam;
 
 import ch.ilv.KoSystem.base.MessageResponse;
 import jakarta.persistence.EntityNotFoundException;

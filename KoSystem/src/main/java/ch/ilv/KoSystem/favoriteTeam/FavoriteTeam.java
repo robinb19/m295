@@ -1,6 +1,6 @@
-package ch.ilv.KoSystem.z_favoriteTeam;
+package ch.ilv.KoSystem.favoriteTeam;
 
-import ch.ilv.KoSystem.z_teams.Team;
+import ch.ilv.KoSystem.teams.Team;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;

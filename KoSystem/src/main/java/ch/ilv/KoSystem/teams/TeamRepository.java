@@ -1,4 +1,4 @@
-package ch.ilv.KoSystem.z_teams;
+package ch.ilv.KoSystem.teams;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

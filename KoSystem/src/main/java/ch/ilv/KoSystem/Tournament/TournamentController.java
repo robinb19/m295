@@ -1,8 +1,7 @@
-package ch.ilv.KoSystem.z_crateTournament;
+package ch.ilv.KoSystem.Tournament;
 
 import ch.ilv.KoSystem.base.MessageResponse;
 import ch.ilv.KoSystem.security.Roles;
-import ch.ilv.KoSystem.z_teams.Team;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.validation.Valid;
@@ -38,7 +37,7 @@ public class TournamentController {
     }
 
     @PostMapping("api/tournament")
-    @RolesAllowed(Roles.ReadWrite)
+    @RolesAllowed(Roles.Read)
     public ResponseEntity<Tournament> newTournament(@Valid @RequestBody Tournament tournament) {
         Tournament savedTournament = tournamentService.insertTournament(tournament);
         return new ResponseEntity<>(savedTournament, HttpStatus.OK);

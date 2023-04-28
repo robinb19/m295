@@ -1,4 +1,4 @@
-package ch.ilv.KoSystem.z_crateTournament;
+package ch.ilv.KoSystem.Tournament;
 
 import ch.ilv.KoSystem.base.MessageResponse;
 import jakarta.persistence.EntityNotFoundException;

@@ -1,8 +1,7 @@
 package ch.ilv.KoSystem;
 
-import ch.ilv.KoSystem.z_teams.Team;
-import ch.ilv.KoSystem.z_teams.TeamRepository;
-import ch.ilv.KoSystem.z_teams.TeamService;
+import ch.ilv.KoSystem.teams.Team;
+import ch.ilv.KoSystem.teams.TeamRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.client.RestTemplate;
 
 import static org.hamcrest.Matchers.containsString;
-import static org.mockito.Mockito.when;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -34,7 +32,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @Rollback(false)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class RestControllerTests {
+class RestControllerTest {
     @Autowired
     private MockMvc api;
 
@@ -100,7 +98,7 @@ class RestControllerTests {
 
 
     @Test
-    void deleteTeam() throws Exception {
+    void testdeleteTeam() throws Exception {
         String accessToken = obtainAccessToken();
         String body = new ObjectMapper().writeValueAsString(team2);
 

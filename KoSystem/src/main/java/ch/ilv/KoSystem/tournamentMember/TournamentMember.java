@@ -1,10 +1,8 @@
-package ch.ilv.KoSystem.z_tournamentMember;
+package ch.ilv.KoSystem.tournamentMember;
 
-import ch.ilv.KoSystem.z_crateTournament.Tournament;
-import ch.ilv.KoSystem.z_teams.Team;
+import ch.ilv.KoSystem.Tournament.Tournament;
+import ch.ilv.KoSystem.teams.Team;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Data

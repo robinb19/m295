@@ -1,7 +1,7 @@
 package ch.ilv.KoSystem;
 
-import ch.ilv.KoSystem.z_teams.Team;
-import ch.ilv.KoSystem.z_teams.TeamRepository;
+import ch.ilv.KoSystem.teams.Team;
+import ch.ilv.KoSystem.teams.TeamRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ import org.springframework.test.annotation.Rollback;
 @DataJpaTest()
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @Rollback(false)
-class DBTests {
+class DBTest {
 
     @Autowired
     private TeamRepository teamRepository;

@@ -1,4 +1,4 @@
-package ch.ilv.KoSystem.z_teams;
+package ch.ilv.KoSystem.teams;
 
 import ch.ilv.KoSystem.base.MessageResponse;
 import jakarta.persistence.EntityNotFoundException;

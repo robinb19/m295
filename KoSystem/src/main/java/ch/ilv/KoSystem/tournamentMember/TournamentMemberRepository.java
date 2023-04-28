@@ -1,7 +1,6 @@
-package ch.ilv.KoSystem.z_tournamentMember;
+package ch.ilv.KoSystem.tournamentMember;
 
-import ch.ilv.KoSystem.z_crateTournament.Tournament;
-import ch.qos.logback.core.util.DatePatternToRegexUtil;
+import ch.ilv.KoSystem.Tournament.Tournament;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,8 +1,7 @@
-package ch.ilv.KoSystem.z_tournamentMember;
+package ch.ilv.KoSystem.tournamentMember;
 
 import ch.ilv.KoSystem.base.MessageResponse;
 import ch.ilv.KoSystem.security.Roles;
-import ch.ilv.KoSystem.z_favoriteTeam.FavoriteTeam;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.validation.Valid;

@@ -1,4 +1,4 @@
-package ch.ilv.KoSystem.z_teams;
+package ch.ilv.KoSystem.teams;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
