@@ -18,11 +18,10 @@ public class TournamentMember {
     @Size(max = 100)
     @NotEmpty
     private String Name;*/
-    /* @ManyToOne(optional = false)
-    @JoinColumn(name = "tournament_id")
+    @OneToOne()
+    @JoinColumn(name = "tournament_id", unique = false)
     private Tournament tournament;
-*/
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "team_id")
+    @OneToOne()
+    @JoinColumn(name = "team_id", unique = false)
     private Team team;
 }

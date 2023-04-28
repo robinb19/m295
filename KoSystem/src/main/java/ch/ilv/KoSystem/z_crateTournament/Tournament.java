@@ -8,6 +8,7 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Entity
@@ -27,8 +28,5 @@ public class Tournament {
     @Temporal(TemporalType.DATE)
     @NotNull
     private Date toDate;
-    //@OneToMany(mappedBy ="tournamentMember")
-    @JoinColumn(name = "tournamentMember_id")
-    private TournamentMember tournamentMember;
 }
 

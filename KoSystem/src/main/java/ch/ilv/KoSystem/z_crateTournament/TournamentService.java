@@ -30,12 +30,11 @@ public class TournamentService {
 
     public Tournament updateTournament(Tournament tournament, Long id) {
         return tournamentRepository.findById(id)
-                .map(teamOrig -> {
-                    teamOrig.setVeranstaltungsOrt(tournament.getVeranstaltungsOrt());
-                    teamOrig.setTurniername(tournament.getTurniername());
-                    teamOrig.setToDate(tournament.getToDate());
-                   // teamOrig.setTournamentMember(tournament.getTournamentMember());
-                    return tournamentRepository.save(teamOrig);
+                .map(tournamentOrig -> {
+                    tournamentOrig.setVeranstaltungsOrt(tournament.getVeranstaltungsOrt());
+                    tournamentOrig.setTurniername(tournament.getTurniername());
+                    tournamentOrig.setToDate(tournament.getToDate());
+                    return tournamentRepository.save(tournamentOrig);
                 })
                 .orElseGet(() -> tournamentRepository.save(tournament));
     }

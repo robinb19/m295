@@ -17,4 +17,11 @@ public class Team {
     @NotEmpty
     private String teamName;
 
+    public Team(){
+
+    }
+
+    public Team(String teamName) {
+        this.teamName = teamName;
+    }
 }

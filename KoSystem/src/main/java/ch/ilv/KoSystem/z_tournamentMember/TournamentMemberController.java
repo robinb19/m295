@@ -35,6 +35,14 @@ public class TournamentMemberController {
         TournamentMember tournamentMember = tournamentMemberService.getTournamentMember(id);
         return new ResponseEntity<>(tournamentMember, HttpStatus.OK);
     }
+
+    @GetMapping("api/getWinner/{id}")
+    @RolesAllowed(Roles.Read)
+    public ResponseEntity<TournamentMember> getWinner(@PathVariable Long id) {
+        TournamentMember winner = (TournamentMember) tournamentMemberService.getWinner(id);
+        return new ResponseEntity<>(winner, HttpStatus.OK);
+    }
+
     @PostMapping("api/tournamentMember")
     @RolesAllowed(Roles.ReadWrite)
     public ResponseEntity<TournamentMember> newTournamentMember(@Valid @RequestBody TournamentMember tournamentMember) {
